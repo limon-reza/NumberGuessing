@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <time.h>
+void playgame(){
+    int number, guess, attempts = 0;
+    srand(time(0));
+    number = rand() % 100 + 1;
+    printf(" Welcome to the number guessing Game!\n");
+    printf("I have chosen a number between 1 and 100.Try to guess it!\n");
+    do{ 
+        printt ("Enter your guess")
+        scanf("%d",&guess);
+        attempts ++;
+    if ( guess > number ) {
+        printf("Too high! Try Again.\n");
+    } else if  ( guess < number ) {
+        printf("Too low! Try again.\n");
+    } else {
+        printf("Congratulations! You guessed the number in %d attempts.\n", attempts);
+    }
+  } while ( guess != number );
+}
+
+int main() {
+    char choice;
+    do {
+        playtime();
+        printf("Do you want to play again? (y/n): ");
+        scanf("%c", &choice);
+    } while (choice == 'y' || choice == 'y');
+
+    printf("Thanks for playing! Goodbye.\n");
+    return 0;
+}
