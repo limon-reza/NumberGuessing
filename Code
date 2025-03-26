@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <time.h>
-void playgame(){
+
+int main(){
     int number, guess, attempts = 0;
     srand(time(0));
     number = rand() % 100 + 1;
     printf(" Welcome to the number guessing Game!\n");
     printf("I have chosen a number between 1 and 100.Try to guess it!\n");
-    do{ 
-        printt ("Enter your guess")
+    do{
+        printf ("Enter your guess");
         scanf("%d",&guess);
         attempts ++;
     if ( guess > number ) {
@@ -18,16 +19,5 @@ void playgame(){
         printf("Congratulations! You guessed the number in %d attempts.\n", attempts);
     }
   } while ( guess != number );
-}
-
-int main() {
-    char choice;
-    do {
-        playtime();
-        printf("Do you want to play again? (y/n): ");
-        scanf("%c", &choice);
-    } while (choice == 'y' || choice == 'y');
-
-    printf("Thanks for playing! Goodbye.\n");
-    return 0;
+  return 0;
 }
